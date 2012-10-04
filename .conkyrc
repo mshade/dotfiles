@@ -1,0 +1,86 @@
+short_units yes
+pad_percents 3
+# conky configuration
+# edited by darcon@gmail.com
+
+# set to yes if you want Conky to be forked in the background
+background yes
+use_xft yes
+xftfont Terminus:size=8
+xftalpha 0.8
+update_interval 2
+total_run_times 0
+own_window no
+own_window_type dock
+own_window_transparent yes
+own_window_argb_visual yes
+own_window_type normal
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+draw_shades yes
+draw_outline no
+draw_borders no
+stippled_borders 8
+border_margin 1
+border_width 1
+default_color white
+default_shade_color black
+default_outline_color white
+alignment middle_left
+gap_y 5
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+net_avg_samples 2
+
+TEXT
+System ${color }${hr 2}${voffset 5}
+#${color slate grey}Date:${color } ${time %a} ${time %e %B %G}
+#${color slate grey}Time:${color } ${time %H:%M:%S} ${time %Z} 
+${color slate grey}Uptime: ${color }$uptime
+${color slate grey}Kernel: ${color }$kernel $machine
+
+# Processor
+${color }Processor ${color }${hr 2}${voffset 5}
+${color slate grey}CPU:${color }$cpu% [${freq} MHz]
+${cpugraph 20,180 1692d0 1692d0}
+${color slate grey}Load: ${color }$loadavg
+${color slate grey}Processes: ${color }$processes ${color }[$running_processes Running]${voffset 5}
+${color slate grey}Temp: ${color }${hwmon 0 temp 1}C
+
+${color slate grey}  Process         PID    CPU
+${color #1692d0}  ${top name 1}${top pid 1}${top_mem cpu 1}%
+${color lightgrey}  ${top name 2}${top pid 2}${top cpu 2}%
+${color lightgrey}  ${top name 3}${top pid 3}${top cpu 3}%
+${color lightgrey}  ${top name 4}${top pid 4}${top cpu 4}%
+
+# Memory
+${color }Memory ${color }${hr 2}${voffset 5}
+${color slate grey}RAM:${color } $mem / $memmax${alignr}$memperc%
+${color #1692d0}${membar 3,180}
+${color slate grey}SWAP:${color} $swap / $swapmax${alignr}$swapperc%
+${color #1692d0}${swapbar 3,180}
+${color slate grey}  Process        PID    MEM
+${color #1692d0}  ${top_mem name 1}${top_mem pid 1}${top_mem mem 1}%
+${color lightgrey}  ${top_mem name 2}${top_mem pid 2}${top_mem mem 2}%
+${color lightgrey}  ${top_mem name 3}${top_mem pid 3}${top_mem mem 3}%
+${color lightgrey}  ${top_mem name 4}${top_mem pid 4}${top_mem mem 4}%
+
+# Storage
+${color }Storage ${color }${hr 2}${voffset 5}
+${color slate grey}root: ${color }${fs_used /} / ${fs_size /}${alignr}${fs_used_perc /}%
+${color slate grey}home: ${color }${fs_used /home} / ${fs_size /home}${alignr}${fs_used_perc /home}%
+${color slate grey}data: ${color }${fs_used /data} / ${fs_size /data}${alignr}${fs_used_perc /data}%
+
+# Netz
+${color }Networking ${color }${hr 2}${voffset 5}
+
+${color slate grey}eth0: [${addr eth0}]${color}
+${downspeedgraph eth0 20,88 884444 884444}${offset 4}${upspeedgraph eth0 20,88 448844 448844}
+${voffset -22}${offset -5}  ${downspeed eth0}   ${totaldown eth0}${offset 2}  ${upspeed eth0}   ${totalup 
+eth0}
+
+${color slate grey}eth1: [${addr eth1}]${color}
+${downspeedgraph eth1 20,88 884444 884444}${offset 4}${upspeedgraph eth1 20,88 448844 448844}
+${voffset -22}${offset -5}  ${downspeed eth1}   ${totaldown eth1}${offset 2}  ${upspeed eth1}   ${totalup eth1}

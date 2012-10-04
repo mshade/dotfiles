@@ -1,0 +1,10 @@
+alias ls='ls --color=auto'
+alias ll='ls -l'
+
+PS1='[\u@\h \W]\$ '
+
+PATH=~/bin:$PATH
+export PATH
+
+eval $(dircolors -b)
+export EDITOR="vim"
