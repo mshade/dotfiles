@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Script to automatically take a screenshot and upload it. Copy the URL to clipboard 
-# Requires: scrot clipit uuidgen
+# Requires: scrot xclip uuidgen
 # mshade@mshade.org
 
 # Where to store scrots
