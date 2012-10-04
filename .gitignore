@@ -1,2 +1,10 @@
 *
 !.*
+.bash_history
+.bash_logout
+.bash_profile
+.esd_auth
+.gitconfig
+.pulse-cookie
+.recently-used
+.viminfo
