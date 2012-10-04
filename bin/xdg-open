@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+# My own xdg-open because fuck all freedesktop does for me
+
+# Default browser command
+
+BROWSER="chromium"
+#BROWSER="google-chrome"
+PDF="okular"
+AUDIO="audacious"
+TEXT="terminal -c vim"
+IMAGE="geeqie"
+VIDEO="mplayer"
+TORRENT="deluge"
+OFFICE="soffice"
+
+# Do we have arguments?
+if [ $# -lt 1 ]
+then
+	echo "xdg-open should be called with a filename or URL as an argument."
+	exit 1
+fi
+
+# Check argument for ftp / http URL and open in browser
+if $(echo $@ | egrep -q '(ftp|http)')
+then
+	$BROWSER "$@" &
+	exit 0
+fi
+
+## User defined fallbacks
+##
+
+# PDF
+if $(echo $@ |grep -qi pdf)
+then
+	$PDF "$@" &
+	exit 0
+fi
+
+# Audio
+if $(xdg-mime query filetype "$@" |grep -qi audio)
+then
+	$AUDIO "$@" &
+	exit 0
+fi
+
+# Text
+
+# Image
+if $(xdg-mime query filetype "$@" |grep -qi image)
+then
+	$IMAGE "$@" &
+	exit 0
+fi
+
+# Video
+if $(xdg-mime query filetype "$@" |grep -qi video)
+then
+	$VIDEO "$@" &
+	exit 0
+fi
+
+# Torrents
+if $(echo $@ |grep -qi .torrent$)
+then
+	$TORRENT "$@" &
+fi
+
+# Office
+if $(echo $@ | egrep -qi '(xls|doc|ppt|dlsx|docx)')
+then
+	$OFFICE "$@" &
+fi
+
+

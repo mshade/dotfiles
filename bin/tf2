@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+
+sudo /home/mshade/bin/cpuset.sh performance
+export WINEARCH=win64
+export WINEPREFIX=~/.wine
+
+WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe -applaunch 440 -nojoy -noipx -novid -useforcedmparms -noforcemaccel -noforcemspd
+
+sudo /home/mshade/bin/cpuset.sh ondemand

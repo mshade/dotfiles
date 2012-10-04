@@ -1,0 +1,28 @@
+#!/bin/bash
+####
+#### xdg-open replacement. bare bones. no shit.
+
+### App preferences
+#   	command / filetype		: id method
+BROWSER="chromium-browser"		# ftp or http url
+PDF="okular"				# pdf extension
+AUDIO="audacious"			# audio mimetype
+TEXT="terminal -c vim"			# .txt or .sh extension
+IMAGE="geeqie"				# image mimetype
+VIDEO="mplayer"				# video mimetype
+TORRENT="deluge"			# .torrent extension
+
+### logic
+# Do we have arguments?
+if [ $# -lt 1 ]
+then
+        echo "xdg-open should be called with a filename or URL as an argument."
+        exit 1
+else
+	ARGS="$@"
+fi
+
+# main function
+open () { "$1" "$@" ;}
+
+

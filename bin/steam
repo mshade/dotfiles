@@ -1,0 +1,4 @@
+#!/bin/bash
+#
+
+WINEDEBUG=-all wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/steam.exe
