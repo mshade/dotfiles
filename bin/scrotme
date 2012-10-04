@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Script to automatically take a screenshot and upload it. Copy the URL to clipboard 
+# Requires: scrot clipit uuidgen
+# mshade@mshade.org
+
+# Where to store scrots
+SCROTDIR=~/scrots
+# Where to scp the file to (you should set up key-based auth to streamline this)
+TARGET="beach2:webroot/"
+# URL base for uploaded images
+URL="http://dimeshake.com/"
+# What scrot invocation to use.  -s = selection by default
+SCROT="scrot -s"
+
+
+####################################################################################
+UUID=$(uuidgen | awk -F- '{print $1}')
+scrot -s ${SCROTDIR}/${UUID}.png && scp ${SCROTDIR}/${UUID}.png ${TARGET} >/dev/null \
+      || echo "Error."
+
+echo "${URL}${UUID}.png" | xclip
+
