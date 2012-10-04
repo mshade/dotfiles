@@ -1,5 +1,6 @@
 *
 !.*
+!.i3*
 .bash_history
 .bash_logout
 .bash_profile
