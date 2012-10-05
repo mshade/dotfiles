@@ -12,3 +12,7 @@ alias ll="ls -l"
 
 export PATH=$PATH:~/bin
 export EDITOR="vim"
+
+shopt -s histappend
+shopt -s checkwinsize
+

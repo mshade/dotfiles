@@ -1,7 +1,8 @@
 *
 !.*
-!.i3*
-!bin/
+!.i3/
+!.i3/*
+!bin
 !bin/*
 .bash_history
 .bash_logout
