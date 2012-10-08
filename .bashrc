@@ -15,4 +15,4 @@ export EDITOR="vim"
 
 shopt -s histappend
 shopt -s checkwinsize
-
+set -o vi
