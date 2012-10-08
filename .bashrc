@@ -9,6 +9,8 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias ll="ls -l"
+alias performance="sudo cpupower frequency-set -g performance"
+alias ondemand="sudo cpupower frequency-set -g ondemand"
 
 export PATH=$PATH:~/bin
 export EDITOR="vim"
