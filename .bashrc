@@ -14,3 +14,7 @@ alias ondemand="sudo cpupower frequency-set -g ondemand"
 
 export PATH=~/bin:$PATH
 export EDITOR="vim"
+
+shopt -s histappend
+shopt -s checkwinsize
+set -o vi
