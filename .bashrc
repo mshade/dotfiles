@@ -12,5 +12,5 @@ alias ll="ls -l"
 alias performance="sudo cpupower frequency-set -g performance"
 alias ondemand="sudo cpupower frequency-set -g ondemand"
 
-export PATH=$PATH:~/bin
+export PATH=~/bin:$PATH
 export EDITOR="vim"
