@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -18,3 +19,6 @@ export EDITOR="vim"
 shopt -s histappend
 shopt -s checkwinsize
 set -o vi
+fortune -a
+export JDK_HOME="/usr/lib/jvm/java-7-openjdk/"
+export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
