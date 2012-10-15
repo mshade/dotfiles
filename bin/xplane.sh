@@ -9,7 +9,8 @@ zaxis=6
 
 # Executable paths
 jhat=~/bin/jhat
-xplane=/data/xplane/X-Plane-i686
+#xplane=/data/xplane/X-Plane-i686
+xplane="./X-Plane-i686"
 
 ## end configuration
 
@@ -29,7 +30,7 @@ fi
 $jhat $dev $xaxis $zaxis &
 pid=$!
 
-cd `dirname "$xplane"`
+#cd `dirname "$xplane"`
 "$xplane"
 
 kill $pid
