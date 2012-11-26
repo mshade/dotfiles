@@ -26,4 +26,7 @@ then
    . ~/.xinitrc."$HOSTNAME"
 fi
 
+# Apps to start
+~/bin/dunstwrap.sh
+
 exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
