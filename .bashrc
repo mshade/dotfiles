@@ -11,8 +11,6 @@ if [[ -r ~/.dircolors ]] && type -p dircolors >/dev/null; then
      eval $(dircolors -b "$HOME/.dircolors")
 fi
 
-fortune -a 
-
 # Aliases, functions, and others
 for config in .aliases .functions .bashrc."$HOSTNAME";
 do
@@ -33,3 +31,6 @@ shopt -s histappend
 shopt -s checkwinsize
 set -o vi
 set -o notify
+
+# Greet yo'sef
+fortune -a 
