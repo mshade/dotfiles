@@ -58,7 +58,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+minus split h
+bindsym $mod+b split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -150,25 +150,26 @@ bar {
 	mode dock
 	position bottom
 	colors {
-		background #002b36
-		statusline #657b83
-		focused_workspace  #93a1a1 #073642
-		active_workspace   #587e75 #002b36
-		inactive_workspace #657b83 #002b36
-		urgent_workspace   #d33682 #073642
+#		background #002b36
+#		statusline #657b83
+#		focused_workspace  #93a1a1 #073642
+#		active_workspace   #587e75 #002b36
+#		inactive_workspace #657b83 #002b36
+#		urgent_workspace   #d33682 #073642
 	}
 }
 
 # solarized
-client.focused   #93a1a1 #073642 #93a1a1
-client.focused_inactive #586e75 #002b36 #586e75
-client.unfocused #657b83 #002b36 #657b83
-client.urgent  #d33682 #073642 #d33682
+#client.focused   #93a1a1 #073642 #93a1a1
+#client.focused_inactive #586e75 #002b36 #586e75
+#client.unfocused #657b83 #002b36 #657b83
+#client.urgent  #d33682 #073642 #d33682
 
 
 focus_follows_mouse no
 
 exec ~/bin/dunstwrap.sh
+exec ~/.screenlayout/default.sh
 
 bindsym XF86MonBrightnessDown	exec xbacklight -dec 10
 bindsym	XF86MonBrightnessUp	exec xbacklight -inc 10

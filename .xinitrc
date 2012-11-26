@@ -11,18 +11,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-# Custom stuff
-# Set synaptics up correctly
-~/bin/synclient.sh &
+# Fonts
+xset +dpms +fp /usr/share/fonts/local
 
-# Make caps lock control
-~/bin/remap-keys.sh
+# input
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 
+# Xresources
+xrdb -merge ~/.Xresources
+
+# machine-specific stuff
+if [[ -r ~/.xinitrc."$HOSTNAME" ]]
+then
+   . ~/.xinitrc."$HOSTNAME"
+fi
 
 exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
-#exec ck-launch-session openbox
-
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
