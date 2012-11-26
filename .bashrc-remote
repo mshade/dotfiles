@@ -1,10 +1,29 @@
-alias ls='ls --color=auto'
-alias ll='ls -l'
+#!/bin/bash
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
 
-PATH=~/bin:$PATH
-export PATH
+if [[ -r ~/.dircolors ]] && type -p dircolors >/dev/null; then
+     eval $(dircolors -b "$HOME/.dircolors")
+fi
 
-eval $(dircolors -b)
+# Aliases, functions, and others
+for config in .aliases .functions .bashrc."$HOSTNAME";
+do
+   [[ -r ~/"$config" ]] && . ~/"$config"
+done
+
+# Paths and ENV variables
+export PATH=~/bin:$PATH
 export EDITOR="vim"
+export VISUAL="$EDITOR"
+
+# Shell opts
+shopt -s histappend
+shopt -s checkwinsize
+set -o vi
+set -o notify

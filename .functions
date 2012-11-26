@@ -1,0 +1,8 @@
+#!/bin/bash
+# 
+
+pushenv() {
+   FILES=".dircolors .bashrc-remote .aliases"
+   rsync -av $FILES $1:
+   rsync -av /usr/share/terminfo/r/rxvt-unicode-256color $1:.terminfo/r/
+}
