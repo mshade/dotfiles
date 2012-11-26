@@ -12,7 +12,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # Fonts
-xset +dpms +fp /usr/share/fonts/local
+#xset +dpms +fp /usr/share/fonts/local
 
 # input
 setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
@@ -27,7 +27,7 @@ then
 fi
 
 # Apps to start
-~/bin/dunstwrap.sh
+~/bin/dunstwrap.sh &
 xautolock -time 10 -locker "i3lock -c 000000" &
 
 exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
