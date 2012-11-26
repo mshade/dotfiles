@@ -19,7 +19,8 @@ fi
 ~/bin/remap-keys.sh
 
 
-exec ck-launch-session i3 --force-xinerama >> ~/.i3/i3log.txt 2>&1
+exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
+#exec ck-launch-session openbox
 
 # exec gnome-session
 # exec startkde
