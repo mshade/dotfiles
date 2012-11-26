@@ -18,10 +18,4 @@ fi
 # Make caps lock control
 ~/bin/remap-keys.sh
 
-
-exec ck-launch-session i3 --force-xinerama >> ~/.i3/i3log.txt 2>&1
-
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
+exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
