@@ -7,3 +7,4 @@ alias performance="sudo cpupower frequency-set -g performance"
 alias ondemand="sudo cpupower frequency-set -g ondemand"
 alias vi='vim'
 alias less='less -S'
+alias sudo="sudo -sE "
