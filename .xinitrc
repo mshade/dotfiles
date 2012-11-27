@@ -30,4 +30,4 @@ fi
 ~/bin/dunstwrap.sh &
 xautolock -time 10 -locker "i3lock -c 000000" &
 
-exec ck-launch-session i3 >> ~/.i3/i3log.txt 2>&1
+exec i3 >> ~/.i3/i3log.txt 2>&1
