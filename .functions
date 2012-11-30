@@ -3,8 +3,9 @@
 
 pushenv() {
    FILES=".dircolors .aliases"
+   ssh $1 'echo . .bashrc > ~/.bash_profile \
+       && mkdir -p .terminfo/r'
    rsync -a $FILES $1:
    rsync -a .bashrc-remote $1:.bashrc
    rsync -a /usr/share/terminfo/r/rxvt-unicode-256color $1:.terminfo/r/
-   ssh $1 'echo . .bashrc > ~/.bash_profile'
 }
