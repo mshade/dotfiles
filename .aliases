@@ -8,3 +8,4 @@ alias ondemand="sudo cpupower frequency-set -g ondemand"
 alias vi='vim'
 alias less='less -S'
 alias sudo="sudo -sE "
+alias rshift="redshift -l 38.71:-77.14 &"
