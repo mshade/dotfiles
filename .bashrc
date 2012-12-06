@@ -32,5 +32,8 @@ shopt -s checkwinsize
 set -o vi
 set -o notify
 
+# ssh-agent setupp
+eval $(ssh-agent)
+
 # Greet yo'sef
 fortune -a 
