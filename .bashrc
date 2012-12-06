@@ -33,7 +33,7 @@ set -o vi
 set -o notify
 
 # ssh-agent setupp
-eval $(ssh-agent)
+eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
 # Greet yo'sef
 fortune -a 
