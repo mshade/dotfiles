@@ -7,6 +7,6 @@ alias performance="sudo cpupower frequency-set -g performance"
 alias ondemand="sudo cpupower frequency-set -g ondemand"
 alias vi='vim'
 alias less='less -S'
-alias sudo="sudo -sE "
+alias sudo="sudo -sE "                       # retain environment.  drop to root shell if no argument exists
 alias rshift="redshift -l 38.71:-77.14 &"
 alias rdp="rdesktop -a 24 -g 1280x1024 -z"
