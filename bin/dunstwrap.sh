@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Restart dunst if it dies.  Which it does, frequently.
 

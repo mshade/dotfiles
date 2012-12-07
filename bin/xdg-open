@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # My own xdg-open because fuck all freedesktop does for me
 

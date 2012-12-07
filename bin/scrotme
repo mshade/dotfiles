@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 #
 # Script to automatically take a screenshot and upload it. Copy the URL to clipboard 
 # Requires: scrot xclip uuidgen

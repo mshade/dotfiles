@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ###########
 #
 # Push terminfo for urxvt to remote box

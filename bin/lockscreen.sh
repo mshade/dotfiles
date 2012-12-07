@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ################################################
 # Monitor X idle time.  Lock screen when idle. 
 					       
