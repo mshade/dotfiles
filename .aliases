@@ -9,3 +9,4 @@ alias vi='vim'
 alias less='less -S'
 alias sudo="sudo -sE "
 alias rshift="redshift -l 38.71:-77.14 &"
+alias rdp="rdesktop -a 24 -g 1280x1024 -z"
