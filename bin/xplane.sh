@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # A unique grep pattern for your joystick. See /proc/bus/input/devices.
 name="AV8R"
