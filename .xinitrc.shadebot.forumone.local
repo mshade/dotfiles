@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+#remap keys
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 
 # Synaptics touchpad settings
 synclient MaxTapTime=0

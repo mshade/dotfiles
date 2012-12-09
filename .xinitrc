@@ -14,9 +14,6 @@ fi
 # Fonts
 #xset +dpms +fp /usr/share/fonts/local
 
-# input
-setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
-
 # Xresources
 xrdb -merge ~/.Xresources
 
