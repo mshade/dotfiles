@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# remap keys
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_lalt_lwin
+
+
 # Synaptics touchpad settings
 synclient MaxTapTime=0
 synclient PalmDetect=1
