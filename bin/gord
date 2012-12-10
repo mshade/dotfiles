@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+ 
+export LC_ALL=C
+file='/tmp/schizoid-ramblings'
+words=4
+fmt='God says... %s\n'
+ 
+if [[ ! -e ${file} ]]; then
+   touch "${file}"
+   [[ -w ${file} ]] || exit 1
+   aspell -l en dump master >"${file}"
+fi
+ 
+while getopts "n:f:" opt; do
+   case $opt in
+      n) words="${OPTARG}"
+         ;;
+      f) fmt="${OPTARG}"
+         ;;
+    esac
+done
+ 
+while read n; do
+   args+=("-e${n}p")
+done< <(shuf -i 0-$(wc -l < "${file}") -n "${words}")
+ 
+words=( $(sed -n "${args[@]}" "${file}") )
+printf -- "$fmt" "${words[*]}"

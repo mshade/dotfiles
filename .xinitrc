@@ -14,9 +14,6 @@ fi
 # Fonts
 #xset +dpms +fp /usr/share/fonts/local
 
-# input
-setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
-
 # Xresources
 xrdb -merge ~/.Xresources
 
@@ -30,5 +27,6 @@ fi
 ~/bin/dunstwrap.sh &
 xautolock -time 10 -locker "i3lock -c 000000" &
 redshift -l 38.71:-77.14&
+~/bin/wallpaper.sh &
 
 exec i3 >> ~/.i3/i3log.txt 2>&1
