@@ -1,0 +1,21 @@
+#Bar config
+bar {
+        status_command i3status
+        mode dock
+        position bottom
+        colors {
+                background #002b36
+                statusline #657b83
+                focused_workspace  #93a1a1 #073642
+                active_workspace   #587e75 #002b36
+                inactive_workspace #657b83 #002b36
+                urgent_workspace   #d33682 #073642
+        }   
+}
+
+# solarized
+client.focused   #93a1a1 #073642 #93a1a1
+client.focused_inactive #586e75 #002b36 #586e75
+client.unfocused #657b83 #002b36 #657b83
+client.urgent  #d33682 #073642 #d33682
+
