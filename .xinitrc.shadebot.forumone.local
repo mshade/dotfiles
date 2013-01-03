@@ -8,8 +8,8 @@ setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_l
 
 
 # Synaptics touchpad settings
-synclient MaxTapTime=0
-synclient PalmDetect=1
+#synclient MaxTapTime=0
+#synclient PalmDetect=1
 
 #display
 xrandr --output DP3 --off --output DP2 --off --output DP1 --off --output HDMI3 --off --output HDMI2 \
