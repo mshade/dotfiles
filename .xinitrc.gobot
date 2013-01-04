@@ -1,1 +1,5 @@
 #setxkbmap -option altwin:swap_lalt_lwin # not necessary with the KBT Pure - hw keyswapping!
+xinput set-prop 8 266 -1
+xinput set-prop 8 268 1
+xinput set-prop 8 267 2
+
