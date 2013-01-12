@@ -1,5 +1,8 @@
-#setxkbmap -option altwin:swap_lalt_lwin # not necessary with the KBT Pure - hw keyswapping!
+# reduce sensitivity and acceleration on the razer
 xinput set-prop 8 266 -1
 xinput set-prop 8 268 1
 xinput set-prop 8 267 2
+
+# keyboard mappings
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_lalt_lwin
 
