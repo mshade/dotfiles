@@ -2,7 +2,7 @@
 # 
 
 pushenv() {
-   FILES=".dircolors .aliases"
+   FILES=".dircolors .aliases .vimrc"
    ssh $1 'echo . .bashrc > ~/.bash_profile \
        && mkdir -p .terminfo/r'
    rsync -a $FILES $1:
