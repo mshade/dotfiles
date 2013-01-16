@@ -6,7 +6,7 @@ commandstart()
 {
    [[ -z $1 ]] && return || size=$1
 
-   i3-msg -t command 'workspace 2'
+   #i3-msg -t command 'workspace 2'
    for ((i=0; i<size; i++)); do
       windows=$(xwininfo -root -tree | grep -c 'terminal-bank')
       while ((windows < i*j + j)); do
@@ -20,7 +20,7 @@ commandstart()
       fi
 
       sleep 0.1
-      urxvtc -name 'terminal-bank' &
+      urxvt -name 'terminal-bank' &
    done
 }
 
