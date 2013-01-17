@@ -5,8 +5,8 @@ filetype plugin indent on
 set background=dark
 " colorscheme solarized
 set number
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
