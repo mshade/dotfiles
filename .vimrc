@@ -17,6 +17,12 @@ set incsearch
 set ignorecase
 set ruler
 set nowrap
+if exists('+colorcolumn')
+    set colorcolumn=80
+else
+    au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+endif
+
 
 " Store certain things when exiting a session
 "  '10  :  marks will be remembered for up to 10 previously edited files
@@ -25,3 +31,15 @@ set nowrap
 "  %    :  saves and restores the buffer list
 "  n... :  where to save the viminfo files
 set viminfo='10,\"100,:20,%,n~/.viminfo
+
+function! ResCur()
+    if line("'\"") <= line("$")
+        normal! g`"
+        return 1
+    endif
+endfunction
+
+augroup resCur
+    autocmd!
+    autocmd BufWinEnter * call ResCur()
+augroup END
