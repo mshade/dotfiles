@@ -3,6 +3,7 @@
 # Control ponymix, a command line pulseaudio mixer, with the 
 # Griffin PowerMate.  
 # Requires: python-evdev module, ponymix, a PowerMate
+# by mshade@mshade.org / github.com/mshade
 
 
 from evdev import InputDevice, ecodes, list_devices
