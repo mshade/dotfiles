@@ -1,2 +1,2 @@
-setxkbmap -option altwin:swap_lalt_lwin
+setxkbmap -option altwin:swap_alt_win
 setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
