@@ -1,0 +1,2 @@
+export GDAL_DATA=/usr/share/geoexpress
+export PROJSO=/usr/lib
