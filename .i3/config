@@ -189,6 +189,6 @@ bindsym XF86AudioLowerVolume  exec ponymix decrease 10
 
 bindsym $mod+m exec i3lock -c 000000
 
-for_window [title="(Steam$|Friends$)"] floating enable
+for_window [title="(Steam$|Friends$|VirtualBox$)"] floating enable
 for_window [title="Team Fortress 2 - OpenGL"] fullscreen
 for_window [class="Steam"] floating enable
