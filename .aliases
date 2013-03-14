@@ -11,3 +11,4 @@ alias sudo="sudo -sE "                       # retain environment.  drop to root
 alias rshift="redshift -l 38.71:-77.14 &"
 alias rdp="rdesktop -a 24 -g 1280x1024 -z"
 alias py='python2'
+alias keyplug="setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win"

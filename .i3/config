@@ -66,6 +66,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
 
+bindsym $mod+Shift+f fullscreen global
+
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -187,6 +189,5 @@ bindsym XF86AudioLowerVolume  exec ponymix decrease 10
 
 bindsym $mod+m exec i3lock -c 000000
 
-for_window [title="(^rdesktop -|Steam$|Friends$)"] floating enable
+for_window [title="(^rdesktop -|Steam$|Friends$|VirtualBox$)"] floating enable
 for_window [title="Team Fortress 2 - OpenGL"] fullscreen
-for_window [class="Steam"] floating enable
