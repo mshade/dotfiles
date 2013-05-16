@@ -24,6 +24,7 @@ export VISUAL="$EDITOR"
 export BROWSER="chromium"
 export PAGER="less"
 export JDK_HOME="/usr/lib/jvm/java-7-openjdk/"
+export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export PYTHONPATH=$HOME/lib/python2.7/site-packages
 
