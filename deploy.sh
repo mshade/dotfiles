@@ -14,7 +14,7 @@ do
     if [[ -f $destination/$dir || -h $destination/$dir || -d $destination/$dir ]]
     then
         echo "File exists, removing and linking."
-        rm -vf $destination/$dir || (echo "Deal with $dir yourself first, and then rerun." ; exit 1 )
+        rm -vf $destination/$dir || echo "Deal with $dir yourself first, and then rerun." ; exit 1 
         ln -vs $destination/$repodir/$dir $destination/$dir
     else
         echo "Creating as new"
