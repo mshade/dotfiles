@@ -2,30 +2,42 @@
 #
 # Script to deploy dotfiles repo to ~
 
-# Enumerate all tracked files.
-files=$(git ls-files)
 repodir="dotfiles"
 destination=$HOME
 
-# loop over files and create symlinks/directories where necessary
-cd $destination
+# directories to link explicitly
+DIRS="bin .vim"
+files=$(git ls-files |grep -v ^bin|grep -v ^.vim)
 
-for file in $files
+for dir in $DIRS
 do
-    # Test if file exists
-    if [[ -e $file ]]
+    if [[ -f $destination/$dir || -h $destination/$dir || -d $destination/$dir ]]
     then
-        echo "replacing $file with $repodir/$file"
-        rm -f $file && ln -s ~/$repodir/$file $file
-    elif [[ -h $file ]]
-    then
-        echo "replacing $file with $repodir/$file"
-        rm -f $file && ln -s ~/$repodir/$file $file
+        echo "File exists, removing and linking."
+        rm -vf $destination/$dir || (echo "Deal with $dir yourself first, and then rerun." ; exit 1 )
+        ln -vs $destination/$repodir/$dir $destination/$dir
     else
-        echo "creating link to $repodir/$file"
-        ln -s ~/$repodir/$file $file || \
-            mkdir -p $(dirname $file) && ln -s ~/$repodir/$file $file
+        echo "Creating as new"
+        ln -vs $destination/$repodir/$dir $destination/$dir
     fi
 done
 
-
+for file in $files
+do
+    if [[ -f $destination/$file || -h $destination/$file ]]
+    then
+        rm -vf $destination/$file 
+        ln -vs $destination/$repodir/$file $destination/$file
+    elif [[ -d $destination/$(dirname $file) ]]
+    then
+        ln -vs $destination/$repodir/$file $destination/$file
+    else
+        if [[ -d $destination/$(dirname $file) ]]
+        then
+            ln -vs $destination/$repodir/$file $destination/$file
+        else
+            mkdir -pv $destination/$(dirname $file)
+            ln -vs $destination/$repodir/$file $destination/$file
+        fi
+    fi
+done
