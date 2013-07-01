@@ -1,10 +1,17 @@
+" vimrc
+" vi:syn=vim
 set nocompatible
-" call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 filetype plugin indent on
 syntax enable
 set background=dark
 " colorscheme solarized
 set number
+
+" Whitespace
+set backspace=indent,eol,start
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
