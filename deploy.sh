@@ -13,17 +13,24 @@ cd $destination
 for file in $files
 do
     # Test if file exists
-    if [[ -e $file ]]
+    if [[ -h $file ]]
     then
         echo "replacing $file with $repodir/$file"
-        rm -f $file && ln -s ~/$repodir/$file $file
-    elif [[ -h $file ]]
+        rm -vf $destination/$file || exit 1
+        ln -s ~/$repodir/$file $destination/$file
+    elif [[ -f $file ]]
     then
         echo "replacing $file with $repodir/$file"
-        rm -f $file && ln -s ~/$repodir/$file $file
+        rm -vf $destination/$file || exit 1
+        ln -s ~/$repodir/$file $destination/$file
+    elif [[ -d $file ]]
+    then
+        echo "$file is a directory..."
     else
-        echo "creating link to $repodir/$file"
-        ln -s ~/$repodir/$file $file
+        echo "creating link to new $repodir/$file"
+        ln -s $destination/$repodir/$file $destination/$file || \
+            mkdir -p $destination/$(dirname $file) && \
+            ln -s $destination/$repodir/$file $destination/$file 
     fi
 done
 
