@@ -4,7 +4,7 @@
 
 # Enumerate all tracked files.
 files=$(git ls-files)
-repodir="./dotfiles"
+repodir="dotfiles"
 destination=$HOME
 
 # loop over files and create symlinks/directories where necessary
@@ -13,13 +13,17 @@ cd $destination
 for file in $files
 do
     # Test if file exists
-    if [[ -f $file ]]
+    if [[ -e $file ]]
     then
         echo "replacing $file with $repodir/$file"
-        rm $file && ln -s $repodir/$file $file
+        rm -f $file && ln -s ~/$repodir/$file $file
+    elif [[ -h $file ]]
+    then
+        echo "replacing $file with $repodir/$file"
+        rm -f $file && ln -s ~/$repodir/$file $file
     else
         echo "creating link to $repodir/$file"
-        ln -s $repodir/$file $file
+        ln -s ~/$repodir/$file $file
     fi
 done
 
