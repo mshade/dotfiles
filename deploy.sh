@@ -36,7 +36,8 @@ do
         then
             ln -vs $destination/$repodir/$file $destination/$file
         else
-            echo "Not sure what to do with $file"
+            mkdir -pv $destination/$(dirname $file)
+            ln -vs $destination/$repodir/$file $destination/$file
         fi
     fi
 done
