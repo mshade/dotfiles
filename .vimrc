@@ -50,3 +50,7 @@ augroup resCur
     autocmd!
     autocmd BufWinEnter * call ResCur()
 augroup END
+
+" Mappings
+"
+nmap <silent> <C-f> :NERDTreeToggle<CR>
