@@ -23,7 +23,8 @@ do
         rm -f $file && ln -s ~/$repodir/$file $file
     else
         echo "creating link to $repodir/$file"
-        ln -s ~/$repodir/$file $file
+        ln -s ~/$repodir/$file $file || \
+            mkdir -p $(dirname $file) && ln -s ~/$repodir/$file $file
     fi
 done
 
