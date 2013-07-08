@@ -31,8 +31,9 @@ URxvt.iso14755_52: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyOutput: false
 URxvt.scrollTtyKeypress: true
-URxvt*transparent:   true
-URxvt*shading:       20
+!URxvt*transparent:   true
+!URxvt*shading:       20
+
 
 ! --[ URxvt - URL/Clipboard Handling ]----------------------
 URxvt.perl-ext-common:      default,matcher
@@ -46,7 +47,8 @@ URxvt.matcher.button:       1
 
 ! --[ URxvt - colors ]--------------------------------------
 URxvt.depth: 32
-URxvt.background: rgba:2222/2222/2222/bbbb
+!URxvt.background: rgba:2222/2222/2222/bbbb
+URxvt.background: rgba:0000/0000/0000/ccdd
 URxvt.foreground:#eeeeee
 
 ! --[ Color Scheme ]----------------------------------------

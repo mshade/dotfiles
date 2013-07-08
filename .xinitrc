@@ -29,4 +29,5 @@ xautolock -time 10 -locker "i3lock -c 000000" &
 #redshift -l 38.71:-77.14&
 ~/bin/wallpaper.sh &
 
-exec i3 >> ~/.i3/i3log.txt 2>&1
+#exec i3 >> ~/.i3/i3log.txt 2>&1
+exec startkde

@@ -4,7 +4,7 @@
 
 # Default browser command
 
-BROWSER="chromium"
+BROWSER="firefox"
 #BROWSER="google-chrome"
 PDF="okular"
 AUDIO="audacious"
