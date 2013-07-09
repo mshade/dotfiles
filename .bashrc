@@ -21,7 +21,7 @@ done
 export PATH=~/bin:$PATH
 export EDITOR="vim"
 export VISUAL="$EDITOR"
-export BROWSER="chromium"
+export BROWSER="firefox"
 export PAGER="less"
 export JDK_HOME="/usr/lib/jvm/java-7-openjdk/"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
