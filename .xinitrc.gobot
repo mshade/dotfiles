@@ -1,5 +1,5 @@
 # keyboard mappings
-keyplug # defined in .aliases
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
 
 # Because xorg redefines xinput device properties on a whime,
 # I wrote an equally dirty script to handle this
