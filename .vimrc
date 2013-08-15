@@ -8,6 +8,7 @@ filetype plugin indent on
 syntax enable
 set background=dark
 " colorscheme solarized
+" colorscheme ir_black
 set number
 
 " Whitespace
@@ -24,6 +25,8 @@ set incsearch
 set ignorecase
 set ruler
 set nowrap
+set wrapscan
+set hidden
 if exists('+colorcolumn')
     set colorcolumn=80
 else

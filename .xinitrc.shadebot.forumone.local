@@ -4,12 +4,12 @@
 #setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
 
 # remap keys
-keyplug # defined in .aliases
+#keyplug # defined in .aliases
 
 
 # Synaptics touchpad settings
-#synclient MaxTapTime=0
-#synclient PalmDetect=1
+synclient MaxTapTime=0
+synclient PalmDetect=1
 
 #display
 xrandr --output DP3 --off --output DP2 --off --output DP1 --off --output HDMI3 --off --output HDMI2 \
@@ -17,8 +17,8 @@ xrandr --output DP3 --off --output DP2 --off --output DP1 --off --output HDMI3 -
    --pos 0x0 --rotate normal --output VGA1 --off
 
 # trackpoint
-#xinput set-prop "TPPS/2 IBM TrackPoint" 269 1
-#xinput set-prop "TPPS/2 IBM TrackPoint" 273 2
-#xinput set-prop "TPPS/2 IBM TrackPoint" 270 6 7 4 5
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 2
+xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Timeout" 200
 
 ~/bin/logislow.sh &

@@ -10,7 +10,8 @@ status = Status(standalone=True)
 # Tue 30 Jul 11:59:46 PM KW31
 #                          ^-- calendar week
 status.register("clock",
-    format="%a %-d %b %X KW%V",)
+    #format="%a %-d %b %X KW%V",)
+    format="%a %-d %b %X",)
 
 # Shows the average load of the last minute and the last 5 minutes
 # (the default value for format is used)
@@ -54,7 +55,7 @@ status.register("battery",
 # Displays whether a DHCP client is running
 status.register("runwatch",
     name="DHCP",
-    path="/var/run/dhclient*.pid",)
+    path="/var/run/dhcpcd*.pid",)
 
 # Shows the address and up/down state of eth0. If it is up the address is shown in
 # green (the default value of color_up) and the CIDR-address is shown
@@ -86,6 +87,6 @@ status.register("disk",
 #
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
-    format="♪{volume}",)
+    format="♪ {volume}",)
 
 status.run()

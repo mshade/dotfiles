@@ -11,4 +11,10 @@ PROP='Device Accel Constant Deceleration'
 # Yes, it's dirty as sin.
 ID=$(xinput list | grep "Logitech Unifying" |awk -Fid= '{print $2}'|awk '{print $1}')
 
+if [[ -z $ID ]]
+then
+    echo "no logitech receiver found"
+    exit 0
+fi
+
 xinput set-prop $ID "$PROP" $DECEL
