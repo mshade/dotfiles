@@ -15,7 +15,7 @@ fi
 #xset +dpms +fp /usr/share/fonts/local
 
 # Xresources
-xrdb -merge ~/.Xresources
+xrdb ~/.Xresources
 
 # machine-specific stuff
 if [[ -r ~/.xinitrc."$HOSTNAME" ]]
