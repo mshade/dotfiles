@@ -191,6 +191,6 @@ bindsym $mod+m exec i3lock -c 000000
 
 for_window [title="(^Kerbal Space Program$|^rdesktop -|^Steam$|^Friends$|^Progress Dialog$|VirtualBox$)"] floating enable
 for_window [title="Team Fortress 2 - OpenGL"] fullscreen
-for_window [class="Steam"] floating enable
+for_window [class="(Steam|MPlayer|Junglediskservermanagement)"] floating enable
 for_window [class="killingfloor-bin"] fullscreen
 

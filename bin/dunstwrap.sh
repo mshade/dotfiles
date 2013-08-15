@@ -14,4 +14,5 @@ do
 		dunst
 		unset PIDX
 	fi
+    sleep 1
 done
