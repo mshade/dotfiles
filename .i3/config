@@ -157,9 +157,10 @@ bindsym $mod+minus scratchpad show
 
 #Bar config
 bar {
-	status_command i3status
+	status_command i3pystatus
 	mode dock
 	position bottom
+    workspace_buttons yes
 	colors {
 #		background #002b36
 #		statusline #657b83
