@@ -1,0 +1,4 @@
+#!/usr/bin/env bash 
+#
+
+transmission-remote localhost -a $@
