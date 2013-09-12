@@ -27,6 +27,9 @@ export JDK_HOME="/usr/lib/jvm/java-7-openjdk/"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export PYTHONPATH=$HOME/lib/python2.7/site-packages
+export LESSOPEN="|/usr/bin/source-highlight %s"
+export LESS=' -R'
+export PS1='\[\033[00;32m\]\u@\h\[\033[01;34m\] \W\$\[\033[00m\] '
 
 # Shell opts
 shopt -s histappend
