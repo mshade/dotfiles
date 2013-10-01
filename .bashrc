@@ -30,6 +30,12 @@ export PYTHONPATH=$HOME/lib/python2.7/site-packages
 export LESSOPEN="|/usr/bin/source-highlight %s"
 export LESS=' -R'
 export PS1='\[\033[00;32m\]\u@\h\[\033[01;34m\] \W\$\[\033[00m\] '
+#Perl
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/mshade/perl5";
+export PERL_MB_OPT="--install_base /home/mshade/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/mshade/perl5";
+export PERL5LIB="/home/mshade/perl5/lib/perl5:$PERL5LIB";
+export PATH="/home/mshade/perl5/bin:$PATH";
 
 # Shell opts
 shopt -s histappend
@@ -42,3 +48,4 @@ eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
 # Greet yo'sef
 fortune -a 
+
