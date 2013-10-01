@@ -27,7 +27,6 @@ export JDK_HOME="/usr/lib/jvm/java-7-openjdk/"
 export JAVA_HOME="/usr/lib/jvm/java-7-openjdk/"
 export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=on"
 export PYTHONPATH=$HOME/lib/python2.7/site-packages
-export LESSOPEN="|/usr/bin/source-highlight %s"
 export LESS=' -R'
 export PS1='\[\033[00;32m\]\u@\h\[\033[01;34m\] \W\$\[\033[00m\] '
 #Perl
@@ -36,6 +35,13 @@ export PERL_MB_OPT="--install_base /home/mshade/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/mshade/perl5";
 export PERL5LIB="/home/mshade/perl5/lib/perl5:$PERL5LIB";
 export PATH="/home/mshade/perl5/bin:$PATH";
+export LESS_TERMCAP_mb=$'\E[01;36m'
+export LESS_TERMCAP_md=$'\E[01;36m'
+export LESS_TERMCAP_me=$'\E[0m'
+export LESS_TERMCAP_se=$'\E[0m'                           
+export LESS_TERMCAP_so=$'\E[01;44;33m'                                 
+export LESS_TERMCAP_ue=$'\E[0m'
+export LESS_TERMCAP_us=$'\E[00;32m'
 
 # Shell opts
 shopt -s histappend
