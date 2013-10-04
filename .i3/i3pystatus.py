@@ -30,15 +30,15 @@ status.register("load")
 #
 # This would also display a desktop notification (via dbus) if the percentage
 # goes below 5 percent while discharging. The block will also color RED.
-#status.register("battery",
-#    format="{status}/{consumption:.2f}W {percentage:.2f}% [{percentage_design:.2f}%] {remaining:%E%hh:%Mm}",
-#    alert=True,
-#    alert_percentage=5,
-#    status={
-#        "DIS": "↓",
-#        "CHR": "↑",
-#        "FULL": "=",
-#    },)
+status.register("battery",
+    format="{status}/{consumption:.2f}W {percentage:.2f}% [{percentage_design:.2f}%] {remaining:%E%hh:%Mm}",
+    alert=True,
+    alert_percentage=5,
+    status={
+        "DIS": "↓",
+        "CHR": "↑",
+        "FULL": "=",
+    },)
 
 # This would look like this:
 # Discharging 6h:51m
@@ -65,7 +65,8 @@ status.register("runwatch",
 #
 # Note: the network module requires PyPI package netifaces-py3
 status.register("network",
-    interface="enp2s0",
+    #interface="enp2s0",
+    interface="eth0",
     format_up="{v4cidr}",)
 
 # Has all the options of the normal network and adds some wireless specific things
