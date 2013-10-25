@@ -22,6 +22,6 @@ done
 
 # load 'em
 
-sudo modprobe snd_ice1712
-pulseaudio --start
+#sudo modprobe snd_ice1712
+#pulseaudio --start
 

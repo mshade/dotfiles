@@ -43,7 +43,9 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[00;32m'
 
+#bspwm
 export BSPWM_SOCKET="/tmp/bspwm-socket"
+export PANEL_FIFO="/tmp/panel-fifo"
 
 # perl
 export PERL5LIB="/home/mshade/perl5/lib/perl5:"
