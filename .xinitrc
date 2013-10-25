@@ -24,11 +24,13 @@ then
 fi
 
 # Apps to start
-~/bin/dunstwrap.sh &
+#~/bin/dunstwrap.sh &
 xautolock -time 10 -locker "i3lock -c 000000" &
-#redshift -l 38.71:-77.14&
+redshift -l 38.71:-77.14&
 ~/bin/wallpaper.sh &
 #
 #sxhkd &
 #exec bspwm
+parcellite &
+
 exec i3

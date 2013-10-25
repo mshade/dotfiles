@@ -198,3 +198,8 @@ for_window [title="Team Fortress 2 - OpenGL"] fullscreen
 for_window [class="(Steam|MPlayer|Junglediskservermanagement)"] floating enable
 for_window [class="killingfloor-bin"] fullscreen
 
+new_window 1pixel
+new_float 1pixel
+
+popup_during_fullscreen smart
+
