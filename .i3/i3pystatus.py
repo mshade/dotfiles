@@ -66,7 +66,7 @@ status.register("runwatch",
 # Note: the network module requires PyPI package netifaces-py3
 status.register("network",
     #interface="enp2s0",
-    interface="enp2s0",
+    interface="eth0",
     format_up="{v4cidr}",)
 
 # Has all the options of the normal network and adds some wireless specific things

@@ -20,7 +20,9 @@ URxvt.highlightColor:#444444
 !URxvt.font: xft:DejaVuSansMono:pixelsize=12,xft:Symbola:pixelsize=10
 !URxvt.boldFont: xft:DejaVuSansMono:pixelsize=12:bold,xft:Symbola:pixelsize=6:bold
 URxvt*font:       xft:Terminus:pixelsize=14
-URxvt*boldFont:   xft:Terminus:bold:pixelsize=14
+URxvt*boldFont:   xft:Terminus:pixelsize=14
+!URxvt.font:xft:droid sans mono slashed:pixelsize=10
+!URxvt.boldFont:xft:droid sans mono slashed:pixelsize=10
 URxvt.internalborder: 0
 URxvt.underlinecolor: #999999
 URxvt.cutchars: "()*,<>[]{}|'"
@@ -48,12 +50,27 @@ URxvt.matcher.button:       1
 ! --[ URxvt - colors ]--------------------------------------
 URxvt.depth: 32
 !URxvt.background: rgba:2222/2222/2222/bbbb
-URxvt.background: rgba:0000/0000/0000/ccdd
+!URxvt.background: rgba:0000/0000/0000/ccdd
+URxvt.background: [95]#000000
 URxvt.foreground:#eeeeee
 
 ! --[ Color Scheme ]----------------------------------------
 !#include ".config/xcolors/digerati"
 #include ".config/xcolors/tango"
+!#include ".config/xcolors/upron"
+!#include ".config/xcolors/erosionedit"
 !#include ".config/xcolors/zenburn"
 !#include ".config/xcolors/solarized"
 !#include ".config/xcolors/4bit"
+!#include ".config/xcolors/blackburn"
+!#include ".config/xcolors/blackgum"
+!#include ".config/xcolors/blue"
+!#include ".config/xcolors/bw_b"
+!#include ".config/xcolors/bw_w"
+!#include ".config/xcolors/charlie_brown"
+!#include ".config/xcolors/clean"
+!#include ".config/xcolors/gohucolor"
+!#include ".config/xcolors/euphrasia"
+!#include ".config/xcolors/zenburn"
+!#include ".config/xcolors/tango"
+

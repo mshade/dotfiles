@@ -66,3 +66,5 @@ eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 # Greet yo'sef
 fortune -a 
 
+# herbstluft
+. ~/apps/hlwm/share/herbstclient-completion

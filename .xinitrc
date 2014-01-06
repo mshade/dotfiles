@@ -33,4 +33,12 @@ redshift -l 38.71:-77.14&
 #exec bspwm
 parcellite &
 
+export XDG_CONFIG_HOME="$HOME/.config"
+export BSPWM_SOCKET="/tmp/bspwm-socket"
+
+compton &
 exec i3
+#exec startxfce4
+#sxhkd &
+#exec bspwm
+#herbstluftwm --locked

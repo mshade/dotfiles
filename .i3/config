@@ -160,7 +160,7 @@ workspace_auto_back_and_forth yes
 
 #Bar config
 bar {
-	status_command i3pystatus
+	status_command i3status
 	mode dock
 	position bottom
     workspace_buttons yes
@@ -174,10 +174,9 @@ bar {
 	}
 }
 
-# solarized
-#client.focused   #93a1a1 #073642 #93a1a1
-#client.focused_inactive #586e75 #002b36 #586e75
-#client.unfocused #657b83 #002b36 #657b83
+client.focused   #000000 #000000 #000000 #000000
+client.focused_inactive ##000000 #000000 #000000 #000000
+client.unfocused #000000 #000000 #000000 #000000
 #client.urgent  #d33682 #073642 #d33682
 
 
@@ -198,8 +197,14 @@ for_window [title="Team Fortress 2 - OpenGL"] fullscreen
 for_window [class="(Steam|MPlayer|Junglediskservermanagement)"] floating enable
 for_window [class="killingfloor-bin"] fullscreen
 
-new_window 1pixel
-new_float 1pixel
+new_window pixel 30
+#new_float pixel 30
+#new_float 1pixel
+
+# Borders
+bindsym $mod+t border normal
+bindsym $mod+y border pixel 15
+bindsym $mod+u border 1pixel
 
 popup_during_fullscreen smart
 
