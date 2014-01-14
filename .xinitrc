@@ -13,6 +13,7 @@ fi
 
 # Fonts
 xset +fp /usr/share/fonts/local
+xsetroot -cursor_name left_ptr
 
 # Xresources
 xrdb ~/.Xresources
@@ -37,8 +38,8 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 
 compton &
-exec i3
+#exec i3
 #exec startxfce4
-#sxhkd &
-#exec bspwm
+sxhkd &
+exec bspwm
 #herbstluftwm --locked
