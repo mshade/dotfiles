@@ -1,0 +1,2 @@
+#!/usr/bin/perl
+exec '/usr/bin/ssh', map {$_ eq '-oForwardAgent no' ? (  ) : $_} @ARGV;

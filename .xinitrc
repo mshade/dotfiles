@@ -11,12 +11,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Xresources
+xrdb ~/.Xresources
+
 # Fonts
 xset +fp /usr/share/fonts/local
 xsetroot -cursor_name left_ptr
+source ~/dotfiles/infinality-settings.sh
 
-# Xresources
-xrdb ~/.Xresources
 
 # machine-specific stuff
 if [[ -r ~/.xinitrc."$HOSTNAME" ]]
