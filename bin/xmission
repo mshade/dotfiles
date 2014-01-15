@@ -1,4 +1,4 @@
 #!/usr/bin/env bash 
 #
 
-transmission-remote localhost -a $@
+transmission-remote filebot -a $@
