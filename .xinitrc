@@ -27,21 +27,15 @@ then
 fi
 
 # Apps to start
-#~/bin/dunstwrap.sh &
 xautolock -time 10 -locker "i3lock -c 000000" &
 redshift -l 38.71:-77.14&
 ~/bin/wallpaper.sh &
-#
-#sxhkd &
-#exec bspwm
 parcellite &
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export BSPWM_SOCKET="/tmp/bspwm-socket"
 
 compton &
-#exec i3
-#exec startxfce4
 sxhkd &
+tint2 &
 exec bspwm
-#herbstluftwm --locked

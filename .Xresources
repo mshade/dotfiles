@@ -74,3 +74,6 @@ URxvt.foreground:#eeeeee
 !#include ".config/xcolors/zenburn"
 !#include ".config/xcolors/tango"
 
+! --[ dzen2 ] ----
+dzen2.font: xft:Terminus:pixelsize=14
+
