@@ -7,7 +7,7 @@ bspc monitor ^1 -d 1 2
 bspc monitor ^2 -d 3 4
 
 bspc config pointer_follows_monitor true
-bspc config focus_follows_mouse true
+bspc config focus_follows_pointer true
 bspc config auto_cancel true
 
 bspc config top_padding 25
