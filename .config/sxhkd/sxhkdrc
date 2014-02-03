@@ -1,0 +1,111 @@
+#
+# bspwm hotkeys
+#
+
+# Exit
+super + shift + e
+    bspc quit
+
+# Kill window
+super + shift + q
+    bspc window -c
+
+# cycle monocle / tiled
+super + t
+    bspc desktop -l next
+
+# balance windows for equal display area
+super + b
+    bspc desktop -B
+
+# toggle fullscreen / float
+super + {s,f}
+    bspc window -t {floating,fullscreen}
+
+# cycle window / desktop
+super + {grave,Tab}
+    bspc {window,desktop} -f last
+
+# swap current with previous window
+super + apostrophe
+    bspc window -s last
+
+super + {o,i}
+    bspc control --record-history off; \
+    bspc window {older,newer} -f; \
+    bspc control --record-history on
+
+# transplant window to last 
+super + y
+    bspc window -w last.manual
+
+# swap with the biggest window
+super + m
+    bspc window -s biggest
+
+# select or move windows
+super + {_,shift + }{h,j,k,l}
+    bspc window -{f,s} {left,down,up,right}
+
+# cycle window focus
+super + {_,shift + }c
+    bspc window -f {next,prev}
+
+# circulate leaves
+super + {comma,period}
+    bspc desktop -C {backward,forward}
+
+# cycle desktops
+super + bracket{left,right}
+    bspc desktop -f {prev,next}
+
+# flip tree horizontal or vertical
+super + {b,v}
+    bspc desktop -F {horizontal,vertical}
+
+# preselect next window spawn position
+super + ctrl + {h,j,k,l}
+    bspc window -p {left,down,up,right}
+
+# cancel preselection
+super + ctrl + {_,shift + }space
+    bspc {window -p cancel,desktop -c}
+
+# 
+super + alt + {h,j,k,l}
+    bspc window -e {left -10,down -10,up -10,right -10}
+
+# 
+super + alt + shift + {h,j,k,l}
+    bspc window -e {right -10,up +10,down -10,left +10} 
+
+# select split ratio of current window
+super + ctrl + {1-9}
+    bspc window -r 0.{1-9}
+
+# switch to desktop, move window to desktop
+super + {_,shift + }{1-9,0}
+    bspc {desktop -f,window -d} ^{1-9,10}
+
+~button1
+    bspc pointer -g focus
+
+super + button{1-3}
+    bspc pointer -g {move,resize_side,resize_corner}
+
+super + !button{1-3}
+    bspc pointer -t %i %i
+
+#
+# wm independent hotkeys
+#
+
+super + Return
+    urxvt
+
+super + d
+    dmenu_run
+
+# make sxhkd reload its configuration files:
+super + Escape
+    pkill -USR1 -x sxhkd
