@@ -60,7 +60,7 @@ super + bracket{left,right}
     bspc desktop -f {prev,next}
 
 # flip tree horizontal or vertical
-super + {b,v}
+super + {n,v}
     bspc desktop -F {horizontal,vertical}
 
 # preselect next window spawn position
