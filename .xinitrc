@@ -32,10 +32,11 @@ redshift -l 38.71:-77.14&
 ~/bin/wallpaper.sh &
 parcellite &
 
-export XDG_CONFIG_HOME="$HOME/.config"
-export BSPWM_SOCKET="/tmp/bspwm-socket"
+#export XDG_CONFIG_HOME="$HOME/.config"
+#export BSPWM_SOCKET="/tmp/bspwm-socket"
 
-compton &
-sxhkd &
-tint2 &
-exec bspwm
+#compton &
+#sxhkd &
+#tint2 &
+#exec bspwm
+exec i3

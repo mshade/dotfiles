@@ -25,7 +25,7 @@ font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -197,7 +197,7 @@ for_window [title="Team Fortress 2 - OpenGL"] fullscreen
 for_window [class="(Steam|MPlayer|Junglediskservermanagement)"] floating enable
 for_window [class="killingfloor-bin"] fullscreen
 
-new_window pixel 30
+#new_window pixel 30
 #new_float pixel 30
 #new_float 1pixel
 
@@ -207,4 +207,3 @@ bindsym $mod+y border pixel 15
 bindsym $mod+u border 1pixel
 
 popup_during_fullscreen smart
-
