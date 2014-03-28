@@ -18,6 +18,10 @@ super + t
 super + b
     bspc desktop -B
 
+# rotate tree
+super + r
+    bspc desktop -R 90
+
 # toggle fullscreen / float
 super + {s,f}
     bspc window -t {floating,fullscreen}
@@ -106,6 +110,10 @@ super + Return
 super + d
     dmenu_run
 
+super + ctrl + m
+    i3lock -c 000000
+
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
+

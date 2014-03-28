@@ -208,4 +208,3 @@ new_float 1pixel
 #bindsym $mod+u border 1pixel
 
 popup_during_fullscreen smart
-
