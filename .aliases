@@ -17,3 +17,4 @@ alias grep='grep --color=auto'
 alias pcon='perl -d -e 1'
 alias wee="ssh -t filebot 'screen -U -rd'"
 alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias ssh="TERM=xterm ssh"
