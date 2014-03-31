@@ -55,6 +55,7 @@ export PERL_LOCAL_LIB_ROOT=":/home/mshade/perl5"
 export PERL_MM_OPT="INSTALL_BASE=/home/mshade/perl5"
 
 # Shell opts
+export HISTCONTROL=ignoreboth:erasedups
 shopt -s histappend
 shopt -s checkwinsize
 set -o vi
