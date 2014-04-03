@@ -56,6 +56,7 @@ export PERL_MM_OPT="INSTALL_BASE=/home/mshade/perl5"
 
 # Shell opts
 export HISTCONTROL=ignoreboth:erasedups
+export HISTSIZE=65536
 shopt -s histappend
 shopt -s checkwinsize
 set -o vi
