@@ -65,7 +65,8 @@ URxvt.depth: 32
 !#include ".config/xcolors/upron"
 !#include ".config/xcolors/erosionedit"
 !#include ".config/xcolors/zenburn"
-#include ".config/xcolors/solarized"
+!#include ".config/xcolors/solarized"
+#include ".config/xcolors/smyck"
 !#include ".config/xcolors/4bit"
 !#include ".config/xcolors/blackburn"
 !#include ".config/xcolors/blackgum"
@@ -78,6 +79,3 @@ URxvt.depth: 32
 !#include ".config/xcolors/euphrasia"
 !#include ".config/xcolors/zenburn"
 !#include ".config/xcolors/tango"
-
-! --[ dzen2 ] ----
-dzen2.font: xft:MonoOne:pixelsize=14
