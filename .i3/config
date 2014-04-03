@@ -15,6 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below. ISO 10646 = Unicode
 #font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+#font -*-monoone-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
@@ -25,7 +26,7 @@ font -*-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -174,10 +175,11 @@ bar {
 	}
 }
 
-client.focused   #000000 #000000 #000000 #000000
-client.focused_inactive ##000000 #000000 #000000 #000000
-client.unfocused #000000 #000000 #000000 #000000
-#client.urgent  #d33682 #073642 #d33682
+#                       border  bg     text     indicator
+client.focused          #268bd2 #000000 #002b36 #2aa198
+client.focused_inactive #002b36 #000000 #657b83 #000000
+client.unfocused        #002b36 #000000 #657b83 #000000
+#client.urgent          #d33682 #000000 #d33682
 
 
 focus_follows_mouse no
@@ -201,6 +203,7 @@ for_window [class="killingfloor-bin"] fullscreen
 #new_window pixel 30
 #new_float pixel 30
 new_float 1pixel
+new_window 1pixel
 
 # Borders
 #bindsym $mod+t border normal
