@@ -1,10 +1,10 @@
 ! --[ Font Rendering ]-------------------------------------
-Xft.dpi:       96
+Xft.dpi:       92
 Xft.antialias: true
 Xft.rgba:      rgb
-Xft.hinting:   true
-Xft.hintstyle: hintslight
-Xft.autohint:  false
+Xft.hinting:   1
+Xft.hintstyle: hintfull
+Xft.autohint:  0
 Xft.lcdfilter: lcddefault
 
 ! --[ Rodent ]----------------------------------------------
@@ -12,17 +12,22 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size:  24
 
 ! --[ URxvt - General ]-------------------------------------
+!URxvt*letterSpace: -4
 URxvt.loginShell:true
 URxvt.scrollBar:false
 URxvt.saveLines:5000
-URxvt.cursorColor:#83C048
-URxvt.highlightColor:#444444
+!URxvt.cursorColor:#83C048
+!URxvt.highlightColor:#444444
 !URxvt.font: xft:DejaVuSansMono:pixelsize=12,xft:Symbola:pixelsize=10
 !URxvt.boldFont: xft:DejaVuSansMono:pixelsize=12:bold,xft:Symbola:pixelsize=6:bold
-URxvt*font:       xft:Terminus:pixelsize=12
-URxvt*boldFont:   xft:Terminus:pixelsize=12
-!URxvt.font:xft:droid sans mono slashed:pixelsize=10
-!URxvt.boldFont:xft:droid sans mono slashed:pixelsize=10
+!URxvt*font:       xft:Terminus:pixelsize=14
+!URxvt*boldFont:   xft:Terminus:pixelsize=14
+!URxvt*font:       xft:inconsolata:pixelsize=12
+!URxvt*boldFont:   xft:inconsolata:pixelsize=12
+!URxvt.font:xft:droid sans mono slashed:pixelsize=12
+!URxvt.boldFont:xft:droid sans mono slashed:pixelsize=12
+URxvt.font:     -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont: -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
 URxvt.internalborder: 0
 URxvt.underlinecolor: #999999
 URxvt.cutchars: "()*,<>[]{}|'"
@@ -33,8 +38,8 @@ URxvt.iso14755_52: false
 URxvt.scrollWithBuffer: true
 URxvt.scrollTtyOutput: false
 URxvt.scrollTtyKeypress: true
-!URxvt*transparent:   true
-!URxvt*shading:       20
+URxvt*transparent:    false
+URxvt*shading:        0
 
 
 ! --[ URxvt - URL/Clipboard Handling ]----------------------
@@ -51,16 +56,16 @@ URxvt.matcher.button:       1
 URxvt.depth: 32
 !URxvt.background: rgba:2222/2222/2222/bbbb
 !URxvt.background: rgba:0000/0000/0000/ccdd
-URxvt.background: [95]#000000
-URxvt.foreground:#eeeeee
+!URxvt.background: [95]#000000
+!URxvt.foreground:#eeeeee
 
 ! --[ Color Scheme ]----------------------------------------
 !#include ".config/xcolors/digerati"
-#include ".config/xcolors/tango"
+!#include ".config/xcolors/tango"
 !#include ".config/xcolors/upron"
 !#include ".config/xcolors/erosionedit"
 !#include ".config/xcolors/zenburn"
-!#include ".config/xcolors/solarized"
+#include ".config/xcolors/solarized"
 !#include ".config/xcolors/4bit"
 !#include ".config/xcolors/blackburn"
 !#include ".config/xcolors/blackgum"
@@ -75,5 +80,4 @@ URxvt.foreground:#eeeeee
 !#include ".config/xcolors/tango"
 
 ! --[ dzen2 ] ----
-dzen2.font: xft:Terminus:pixelsize=14
-
+dzen2.font: xft:MonoOne:pixelsize=14
