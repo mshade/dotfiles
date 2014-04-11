@@ -43,10 +43,6 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[00;32m'
 
-#bspwm
-export BSPWM_SOCKET="/tmp/bspwm-socket"
-export PANEL_FIFO="/tmp/panel-fifo"
-
 # perl
 export PERL5LIB="/home/mshade/perl5/lib/perl5:"
 export PERL_MB_OPT="--install_base /home/mshade/perl5"
@@ -67,6 +63,3 @@ eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
 
 # Greet yo'sef
 fortune -a 
-
-# herbstluft
-. ~/apps/hlwm/share/herbstclient-completion
