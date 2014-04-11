@@ -178,10 +178,10 @@ bar {
 }
 
 #                       border  bg     text     indicator
-client.focused          #268bd2 #000000 #002b36 #2aa198
-client.focused_inactive #002b36 #000000 #657b83 #000000
-client.unfocused        #002b36 #000000 #657b83 #000000
-#client.urgent          #d33682 #000000 #d33682
+client.focused          #c75646 #c75646 #002b36 #000000
+client.focused_inactive #218693 #218693 #657b83 #000000
+client.unfocused        #218693 #218693 #657b83 #000000
+#client.urgent          #000000 #000000 #d33682
 
 
 focus_follows_mouse no
