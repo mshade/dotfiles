@@ -9,7 +9,7 @@ syntax enable
 set background=dark
 " colorscheme solarized
 " colorscheme ir_black
-set number
+set laststatus=2 title number
 
 " Whitespace
 set backspace=indent,eol,start
