@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#keyplug # defined in .aliases
+
+# Synaptics touchpad settings
+synclient MaxTapTime=0
+synclient PalmDetect=1
+
+# remap keys
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
