@@ -20,11 +20,8 @@ own_window no
 
 
 TEXT
-# Battery:
-[{"full_text":"BAT","color":"\#444444","separator":false,"separator_block_width":6},\
-{"full_text":"${battery_short}","color":"\#888888","separator":false,"separator_block_width":6},\
 # Uptime:
-{"full_text":"UPTIME","color":"\#444444","separator":false,"separator_block_width":6},\
+[{"full_text":"UPTIME","color":"\#444444","separator":false,"separator_block_width":6},\
 {"full_text":"${uptime_short}","color":"\#888888","separator":false,"separator_block_width":6},\
 
 ## CPU temperature and usage:
