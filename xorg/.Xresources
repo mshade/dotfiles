@@ -12,7 +12,7 @@ Xcursor.theme: Vanilla-DMZ
 Xcursor.size:  24
 
 ! --[ URxvt - General ]-------------------------------------
-!Rxvt*letterSpace: -1
+!URxvt*letterSpace: -1
 URxvt.loginShell:true
 URxvt.scrollBar:false
 URxvt.saveLines:5000
@@ -20,10 +20,10 @@ URxvt.saveLines:5000
 !URxvt.highlightColor:#444444
 !URxvt.font: xft:DejaVuSansMono:pixelsize=12,xft:Symbola:pixelsize=10
 !URxvt.boldFont: xft:DejaVuSansMono:pixelsize=12:bold,xft:Symbola:pixelsize=6:bold
-!URxvt*font:       xft:Terminus:pixelsize=14
-!URxvt*boldFont:   xft:Terminus:pixelsize=14
-URxvt*font:       xft:MonoOne:pixelsize=12
-URxvt*boldFont:   xft:MonoOne:pixelsize=12
+URxvt*font:       xft:Terminus:pixelsize=14
+URxvt*boldFont:   xft:Terminus:pixelsize=14
+!URxvt*font:       xft:inconsolata:pixelsize=14
+!URxvt*boldFont:   xft:inconsolata:pixelsize=14
 !URxvt.font:xft:droid sans mono slashed:pixelsize=12
 !URxvt.boldFont:xft:droid sans mono slashed:pixelsize=12
 !URxvt.font:     -*-dina-medium-r-*-*-12-*-*-*-*-*-*-*
