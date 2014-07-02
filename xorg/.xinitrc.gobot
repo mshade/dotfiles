@@ -1,5 +1,5 @@
 # keyboard mappings
-setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,altwin:swap_alt_win
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,altwin:swap_alt_win,ctrl:nocaps,altwin:swap_alt_win
 
 xinput set-prop 'Razer Razer DeathAdder' 'Device Accel Constant Deceleration' 3
 
