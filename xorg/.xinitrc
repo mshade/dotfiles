@@ -32,4 +32,5 @@ redshift -l 38.71:-77.14&
 ~/bin/wallpaper.sh &
 parcellite &
 
-exec i3
+~/apps/2bwm/2bwm &
+exec ~/bin/startbar.sh
