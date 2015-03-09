@@ -165,7 +165,7 @@ bar {
 #	status_command ping -c1 joebot
 	status_command ~/bin/i3conky.sh
 	mode dock
-	position top
+	position bottom
     workspace_buttons yes
 	colors {
 #		background #002b36
