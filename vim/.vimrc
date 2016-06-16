@@ -9,6 +9,9 @@ syntax enable
 set background=dark
 " colorscheme solarized
 " colorscheme ir_black
+let base16colorspace=256
+colorscheme base16-default
+
 set laststatus=2 title number
 
 " Whitespace
@@ -63,3 +66,4 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 let mapleader=" "
+
