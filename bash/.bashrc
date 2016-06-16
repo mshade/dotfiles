@@ -13,6 +13,9 @@ PS1='[\u@\h \W]\$ '
 
 eval $(dircolors)
 
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 # Aliases, functions, and others
 for config in .aliases .functions .bashrc."$HOSTNAME";
 do
