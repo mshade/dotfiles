@@ -9,7 +9,7 @@ PROP='Device Accel Constant Deceleration'
 
 # Get dev ID of Logitech Unifying Device receiver.  
 # Yes, it's dirty as sin.
-ID=$(xinput list | grep "Logitech Unifying" |awk -Fid= '{print $2}'|awk '{print $1}')
+ID=$(xinput list | grep "Logitech" |awk -Fid= '{print $2}'|awk '{print $1}')
 
 if [[ -z $ID ]]
 then
