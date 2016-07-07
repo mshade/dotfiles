@@ -29,6 +29,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+# Take a scrot
+bindsym --release $mod+x exec scrot
+bindsym --release $mod+Shift+x exec scrot -s
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -120,8 +124,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # Moving workspaces
-bindsym $mod+x move workspace to output right
-bindsym $mod+z move workspace to output left
+#bindsym $mod+x move workspace to output right
+#bindsym $mod+z move workspace to output left
+bindsym $mod+Control+l move workspace to output right
+bindsym $mod+Control+h move workspace to output left
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
