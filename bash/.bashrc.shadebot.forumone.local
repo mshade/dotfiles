@@ -1,1 +1,1 @@
-export PATH=$PATH:/opt/android-studio/bin
+export PATH=$PATH:~/node_modules/.bin
