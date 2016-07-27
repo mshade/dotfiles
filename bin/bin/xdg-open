@@ -5,11 +5,11 @@
 # Default browser command
 
 #BROWSER="firefox"
-BROWSER="chromium"
 #BROWSER="google-chrome"
+BROWSER="chromium"
 PDF="okular"
 AUDIO="audacious"
-TEXT="terminal -c vim"
+TEXT="termite -c vim"
 IMAGE="geeqie"
 VIDEO="mplayer"
 TORRENT="deluge"

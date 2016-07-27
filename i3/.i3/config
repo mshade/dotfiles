@@ -29,6 +29,10 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
+# Take a scrot
+bindsym --release $mod+x exec scrot
+bindsym --release $mod+Shift+x exec scrot -s
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -120,8 +124,10 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exit
 
 # Moving workspaces
-bindsym $mod+x move workspace to output right
-bindsym $mod+z move workspace to output left
+#bindsym $mod+x move workspace to output right
+#bindsym $mod+z move workspace to output left
+bindsym $mod+Control+l move workspace to output right
+bindsym $mod+Control+h move workspace to output left
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -229,13 +235,13 @@ bindsym XF86MonBrightnessDown	exec xbacklight -dec 10
 bindsym	XF86MonBrightnessUp	exec xbacklight -inc 10
 
 # Volume
-bindsym XF86AudioRaiseVolume  exec ponymix -N increase 10
-bindsym XF86AudioLowerVolume  exec ponymix -N decrease 10
-bindsym XF86AudioMute exec ponymix toggle
+bindsym XF86AudioRaiseVolume exec notify-send mixer $(ponymix increase 10)
+bindsym XF86AudioLowerVolume exec notify-send mixer $(ponymix decrease 10)
+bindsym XF86AudioMute exec notify-send mixer $(ponymix toggle)
 
-bindsym $mod+comma exec ponymix -N decrease 10
-bindsym $mod+period exec ponymix -N increase 10
-bindsym $mod+slash exec ponymix -N toggle
+bindsym $mod+less exec notify-send mixer $(ponymix decrease 10) 
+bindsym $mod+greater exec notify-send mixer $(ponymix increase 10) 
+bindsym $mod+slash exec notify-send mixer "mute $(ponymix toggle)"
 
 bindsym $mod+m exec i3lock -c 000000
 
@@ -244,7 +250,7 @@ for_window [class="Steam"] floating enable, border none
 for_window [title="(^Kerbal Space Program$|^rdesktop -|^Steam$|^Friends$|^Progress Dialog$|VirtualBox$|Skype™|^Liferea$)"] floating enable
 for_window [title="Team Fortress 2 - OpenGL"] fullscreen
 for_window [title="^RUNNING"] fullscreen
-for_window [class="(Steam|MPlayer|Junglediskservermanagement)"] floating enable
+for_window [class="(Steam|MPlayer)"] floating enable
 for_window [class="killingfloor-bin"] fullscreen
 
 #new_window pixel 30
