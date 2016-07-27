@@ -7,7 +7,7 @@
 # Where to store scrots
 SCROTDIR=~/scrots
 # Where to scp the file to (you should set up key-based auth to streamline this)
-TARGET="beach2:webroot/"
+TARGET="dimeshake@beefbot:webroot/"
 # URL base for uploaded images
 URL="http://dimeshake.com/"
 # What scrot invocation to use.  -s = selection by default

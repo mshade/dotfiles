@@ -14,7 +14,7 @@
 #           xwininfo    - gstate()
 
 # configuration variables
-refresh_rate=0.75               # how often will the bar update
+refresh_rate=0.5               # how often will the bar update
 datefmt="%d %b %H:%M"         # date time format
 #maildir=~/var/mail/INBOX/new    # where do new mails arrive ?
 alsactl=Master                  # which alsa channel to display
@@ -29,7 +29,8 @@ barbg='%{F#00888888}'
 
 # Group characters
 
-grpfg='%{F#ff111111} '
+#grpfg='%{F#ff111111} '
+grpfg='%{F#ff666666} '
 grpmg='%{F#ff2288cc} '
 grpbg='%{F#ffbbbbbb} '
 
@@ -176,8 +177,48 @@ makebar() {
     echo "${bar}${barfg}"
 }
 
-# This loop will fill a buffer with our infos, and output it to stdout.
-buf="%{l}%{S+} "
+## Start of output
+# First monitor
+buf="%{l}"
+
+# Set icon depending on the interface that is up
+buf="${buf}${barmg} "
+if test "$(netint)" = "enp3s0"; then
+    buf="${buf}${barfg}"
+elif test "$(netint)" = "wlan0"; then
+    buf="${buf}${barfg}"
+else
+    buf="${buf}${barfg}"
+fi
+
+buf="$buf $(netstate) "
+buf="${buf}${barmg} ${barfg} $(nettrafic down) "
+buf="${buf}${barmg} ${barfg} $(nettrafic up) "
+
+# Aligned center
+buf="${buf}%{c} $(gstate)"
+
+# Aligned right
+buf="${buf}%{r}"
+buf="${buf}${barmg}  ${barfg}$(cpuload) ${barmg} ${barfg}$(memused)" # ${barfg} $(mails) "
+
+# Change icon if volume is muted
+if amixer get $alsactl | grep '\[off\]' >/dev/null; then
+    buf="${buf}${barmg} ${barfg} "
+else
+    buf="${buf}${barmg} ${barfg} "
+fi
+buf="${buf}$(makebar $(volume)) "
+
+# Show battery status if there is a battery (U DONT SAY)
+test -n "${battery}" &&
+    buf="${buf}${barmg} ${barfg} $(makebar $(battery)) "
+
+buf="${buf}${barmg} ${barfg} $(clock)  "
+
+
+# Right monitor
+buf="${buf}%{S+}%{l} "
 
 # Set icon depending on the interface that is up
 buf="${buf}${barmg} "
