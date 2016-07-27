@@ -190,15 +190,15 @@ bar {
 	status_command ~/bin/i3conky.sh
 	mode dock
 	position bottom
-    workspace_buttons yes
-		colors {
-				separator $base03
-        background $base01
-        statusline $base05
-        focused_workspace $base0C $base0D $base00
-        active_workspace $base02 $base02 $base07
-        inactive_workspace $base01 $base01 $base03
-        urgent_workspace $base08 $base08 $base07
+  workspace_buttons yes
+  colors {
+    separator $base03
+    background $base01
+    statusline $base05
+    focused_workspace $base0C $base0D $base00
+    active_workspace $base02 $base02 $base07
+    inactive_workspace $base01 $base01 $base03
+    urgent_workspace $base08 $base08 $base07
 
 #		background #002b36
 #		statusline #657b83
@@ -263,5 +263,5 @@ new_float normal
 popup_during_fullscreen smart
 
 # Gaps
-#gaps inner 20
-#gaps outer 00
+gaps inner 20
+gaps outer 00
