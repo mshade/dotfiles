@@ -13,6 +13,12 @@ PS1='[\u@\h \W]\$ '
 
 eval $(dircolors)
 
+THEME=base16-default.dark
+
+if [[ -r ~/.config/base16-shell/$THEME.sh ]]; then
+  source ~/.config/base16-shell/$THEME.sh
+fi
+
 # Aliases, functions, and others
 for config in .aliases .functions .bashrc."$HOSTNAME";
 do
