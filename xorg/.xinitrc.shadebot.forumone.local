@@ -13,7 +13,7 @@
 #   --off --output HDMI1 --mode 1920x1080 --pos 1600x0 --rotate normal --output LVDS1 --mode 1600x900 \
 #   --pos 0x0 --rotate normal --output VGA1 --off
 #. ~/.screenlayout/dualmon.sh
-. ~/.screenlayout-old/bigmon.sh
+#. ~/.screenlayout-old/bigmon.sh
 
 # trackpoint
 #xinput set-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 1
@@ -26,4 +26,4 @@
 ~/bin/logislow.sh &
 #touch ~/shadebot-xinitrc-ran
 #setxkbmap -option altwin:swap_alt_win
-setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,altwin:swap_alt_win,ctrl:nocaps

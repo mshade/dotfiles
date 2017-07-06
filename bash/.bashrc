@@ -23,7 +23,7 @@ do
 done
 
 # Paths and ENV variables
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.4.0/bin:$HOME/bin:$HOME/node_modules/.bin/:$PATH
 export EDITOR="vim"
 export VISUAL="$EDITOR"
 export BROWSER="chromium"
@@ -63,6 +63,9 @@ set -o notify
 
 # ssh-agent setupp
 eval $(keychain --eval --agents ssh -Q --quiet id_rsa)
+
+# rbenv
+eval "$(rbenv init -)"
 
 # Greet yo'sef
 fortune -a 

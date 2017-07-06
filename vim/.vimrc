@@ -6,6 +6,7 @@ call pathogen#helptags()
 
 filetype plugin indent on
 syntax enable
+autocmd BufNewFile,BufRead *.sls set syntax=yaml
 set background=dark
 " colorscheme solarized
 " colorscheme ir_black

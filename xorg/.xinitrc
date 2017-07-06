@@ -30,16 +30,19 @@ then
 fi
 
 # Apps to start
-xautolock -time 10 -locker "i3lock -c 000000" &
+#xautolock -time 10 -locker "i3lock -c 000000" &
 #redshift -l 38.71:-77.14&
 #~/bin/wallpaper.sh &
-sh ~/.fehbg &
-parcellite &
+#sh ~/.fehbg &
+#parcellite &
 
 #~/apps/2bwm/2bwm &
 #exec ~/bin/startbar.sh
-#exec cinnamon-session
 #/home/mshade/.screenlayout/4kmain1080secondary.sh 
-exec ~/apps/i3/i3
+#exec ~/apps/i3/i3
 #exec i3
+exec openbox-session
 #exec startkde
+#exec startlxqt
+#exec gnome-session
+#exec cinnamon-session

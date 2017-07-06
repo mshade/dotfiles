@@ -129,6 +129,7 @@ bindsym $mod+Shift+e exit
 bindsym $mod+Control+l move workspace to output right
 bindsym $mod+Control+h move workspace to output left
 
+bindsym $mod+z exec xrandr --auto
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
