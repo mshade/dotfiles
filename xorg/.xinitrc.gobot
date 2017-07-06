@@ -1,8 +1,8 @@
 # keyboard mappings
-setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,altwin:swap_alt_win,ctrl:nocaps,altwin:swap_alt_win
+setxkbmap -option terminate:ctrl_alt_bksp,compose:ralt,ctrl:nocaps,altwin:swap_alt_win
 
 xinput set-prop 'Razer Razer DeathAdder' 'Device Accel Constant Deceleration' 3
 
 # Because xorg redefines xinput device properties on a whime,
 # I wrote an equally dirty script to handle this
-~/bin/logislow.sh &
+#~/bin/logislow.sh &
